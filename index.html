@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-  <title>Website Hiển Thị Video</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Hiển Thị Video</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <button id="playButton">Xem Video</button>
-    <div id="videoContainer">
-      <video id="myVideo" width="640" height="360" controls>
-        <source src="./assets/kien_2024.mp4" type="video/mp4">
-        
-      </video>
-    </div>
-  </div>
 
-  <script src="script.js"></script>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Chào mừng đến với video của tôi!</h1>
+            <button id="playButton" class="btn-play"><i class="fas fa-play"></i> Xem Video</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="videoContainer">
+            <video id="myVideo" width="800" height="450" controls preload="metadata" poster="/assets/thumbnail.jpg">
+                <source src="/assets/kien_2024.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ xem video.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

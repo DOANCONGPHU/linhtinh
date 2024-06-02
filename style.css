@@ -1,37 +1,64 @@
+/* General Styles */
 body {
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  #playButton {
-    background-color: #e74c3c; /* Màu đỏ */
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  
-  #playButton:hover {
-    background-color: #c0392b; /* Màu đỏ đậm hơn khi hover */
-  }
-  
-  #videoContainer {
-    display: none;
-    margin-top: 20px;
-  }
-  
-  #myVideo {
-    border: 5px solid #3498db; /* Viền xanh xung quanh video */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #222; /* Dark background */
+  color: #fff;
+}
+
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center; /* Center content */
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.btn-play {
+  background-color: #e74c3c;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+.btn-play:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px); /* Lift button on hover */
+}
+
+/* Video Container */
+#videoContainer {
+  display: none;
+  margin-top: 20px;
+}
+
+#myVideo {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border: none; /* Remove border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More prominent box shadow */
+}
