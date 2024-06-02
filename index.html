@@ -1,30 +1,65 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Hiển Thị Video</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Video Tuyệt Đỉnh</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Chào mừng đến với video của tôi!</h1>
-            <button id="playButton" class="btn-play"><i class="fas fa-play"></i> Xem Video</button>
-        </div>
+  <header>
+    <nav>
+      <div class="logo">Logo</div>
+      <ul class="menu">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Video</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Khám phá thế giới video</h1>
+      <p>Nơi hội tụ những khoảnh khắc đáng nhớ</p>
+      <button id="playButton" class="btn-play"><i class="fas fa-play"></i> Xem Video</button>
+    </div>
+  </section>
+
+  <main class="container">
+    <div id="videoContainer">
+      <video id="myVideo" width="800" height="450" controls preload="metadata" poster="/assets/thumbnail.jpg">
+        <source src="/assets/kien_2024.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ xem video.
+      </video>
     </div>
 
-    <div class="container">
-        <div id="videoContainer">
-            <video id="myVideo" width="800" height="450" controls preload="metadata" poster="/assets/thumbnail.jpg">
-                <source src="/assets/kien_2024.mp4" type="video/mp4">
-                Trình duyệt của bạn không hỗ trợ xem video.
-            </video>
-        </div>
+    <div class="video-details">
+      <h2>Tiêu đề video</h2>
+      <p>Mô tả chi tiết về nội dung video. Bạn có thể thêm các thẻ HTML như <b>, <i>, <u> để làm nổi bật nội dung.</p>
+      <div class="video-stats">
+        <span><i class="fas fa-eye"></i> 1000 lượt xem</span>
+        <span><i class="fas fa-thumbs-up"></i> 500 lượt thích</span>
+        <span><i class="fas fa-comment"></i> 200 bình luận</span>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="comments-section">
+      <h3>Bình luận</h3>
+      </div>
+
+    <div class="related-videos">
+      <h3>Các video liên quan</h3>
+      </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Website Video Tuyệt Đỉnh</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

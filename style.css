@@ -62,3 +62,67 @@ body {
   border: none; /* Remove border */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More prominent box shadow */
 }
+/* ... (các style cơ bản như trong ví dụ trước) ... */
+
+/* Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  /* ... (giữ nguyên như ví dụ trước) ... */
+  background-attachment: fixed; /* Tạo hiệu ứng parallax */
+}
+
+/* Video Details */
+.video-details {
+  margin-top: 20px;
+}
+
+.video-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.video-stats span {
+  display: flex;
+  align-items: center;
+}
+
+/* Comments Section */
+.comments-section {
+  margin-top: 30px;
+}

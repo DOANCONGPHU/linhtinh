@@ -9,3 +9,15 @@ playButton.addEventListener('click', () => {
     myVideo.play();
 });
 
+// ... (lazy loading như ví dụ trước) ...
+
+// Thêm hiệu ứng cuộn mượt
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
