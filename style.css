@@ -1,0 +1,37 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  #playButton {
+    background-color: #e74c3c; /* Màu đỏ */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  #playButton:hover {
+    background-color: #c0392b; /* Màu đỏ đậm hơn khi hover */
+  }
+  
+  #videoContainer {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  #myVideo {
+    border: 5px solid #3498db; /* Viền xanh xung quanh video */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
