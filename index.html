@@ -1,65 +1,92 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Video Tuyệt Đỉnh</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Video Đẹp & Hiện Đại</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <header>
+        <div class="logo">Logo</div>
+        <ul class="menu">
+            <li><a href="#hero">Trang chủ</a></li>
+            <li><a href="#videos">Video</a></li>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+        </label>
+    </header>
 
-  <header>
-    <nav>
-      <div class="logo">Logo</div>
-      <ul class="menu">
-        <li><a href="#">Trang chủ</a></li>
-        <li><a href="#">Video</a></li>
-        <li><a href="#">Giới thiệu</a></li>
-        <li><a href="#">Liên hệ</a></li>
-      </ul>
-    </nav>
-  </header>
+    <section id="hero">
+        <div id="videoContainer"></div>
+        <div class="hero-content">
+            <h1 id="videoTitle"></h1>
+            <p id="videoDescription"></p>
+            <div class="video-actions">
+                <button id="shareButton"><i class="fas fa-share-alt"></i> Chia sẻ</button>
+            </div>
+        </div>
+    </section>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Khám phá thế giới video</h1>
-      <p>Nơi hội tụ những khoảnh khắc đáng nhớ</p>
-      <button id="playButton" class="btn-play"><i class="fas fa-play"></i> Xem Video</button>
+    <section id="videos">
+        <h2>Các video khác</h2>
+        <div class="filter-bar">
+            <button class="filter-btn" data-category="all">Tất cả</button>
+            <button class="filter-btn" data-category="music">Âm nhạc</button>
+            <button class="filter-btn" data-category="comedy">Hài kịch</button>
+            <button class="filter-btn" data-category="sports">Thể thao</button>
+        </div>
+        <div class="video-grid"></div>
+    </section>
+
+    <section id="about">
+        <h2>Về chúng tôi</h2>
+        <p>Chúng tôi là một trang web chia sẻ video hiện đại và đẹp mắt, nơi bạn có thể tìm thấy những video chất lượng cao từ nhiều lĩnh vực khác nhau. Chúng tôi cam kết mang lại trải nghiệm tốt nhất cho người dùng.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Liên hệ</h2>
+        <form id="contactForm">
+            <label for="name">Tên:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Tin nhắn:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Gửi</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Website Video Đẹp & Hiện Đại</p>
+    </footer>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modalVideoContainer"></div>
+            <h2 id="modalVideoTitle"></h2>
+            <p id="modalVideoDescription"></p>
+            <div class="comments-section">
+                <h3>Bình luận</h3>
+                <ul id="commentsList"></ul>
+                <form id="commentForm">
+                    <input type="text" id="commentInput" placeholder="Viết bình luận...">
+                    <button type="submit">Gửi</button>
+                </form>
+            </div>
+        </div>
     </div>
-  </section>
 
-  <main class="container">
-    <div id="videoContainer">
-      <video id="myVideo" width="800" height="450" controls preload="metadata" poster="/assets/thumbnail.jpg">
-        <source src="/assets/kien_2024.mp4" type="video/mp4">
-        Trình duyệt của bạn không hỗ trợ xem video.
-      </video>
-    </div>
-
-    <div class="video-details">
-      <h2>Tiêu đề video</h2>
-      <p>Mô tả chi tiết về nội dung video. Bạn có thể thêm các thẻ HTML như <b>, <i>, <u> để làm nổi bật nội dung.</p>
-      <div class="video-stats">
-        <span><i class="fas fa-eye"></i> 1000 lượt xem</span>
-        <span><i class="fas fa-thumbs-up"></i> 500 lượt thích</span>
-        <span><i class="fas fa-comment"></i> 200 bình luận</span>
-      </div>
-    </div>
-
-    <div class="comments-section">
-      <h3>Bình luận</h3>
-      </div>
-
-    <div class="related-videos">
-      <h3>Các video liên quan</h3>
-      </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2023 Website Video Tuyệt Đỉnh</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
